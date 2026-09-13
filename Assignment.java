@@ -4,6 +4,13 @@ public class Assignment {
         String[] itemNames = new String[10];
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
+
+        //test data
+        itemNames[8] = "Banaa";
+        itemPrices[8] = 0.59;
+        itemStocks[8] = 30;
+         restockItem(itemNames, itemStocks, "Banana", 20);
+        printInventory(itemNames, itemPrices, itemStocks);
     }
   
     public static void printInventory(String[] names, double[] prices, int[] stocks){
@@ -15,10 +22,13 @@ public class Assignment {
 
     public static void restockItem(String[] names, int[] stocks, String target, int amount){
         for (int i=0; i < names.length; i++){
-            if(names[i].equalsIgnoreCase(target)){
+            if(names[i] != null && names[i].equalsIgnoreCase(target)){
                 stocks[i] += amount;
+                System.out.println(amount + " units added to " + target + "'s stock.");
                 break;
             }
+            else if(i == (names.length - 1))
+                System.out.println("Item not found");
         }
 
     }
