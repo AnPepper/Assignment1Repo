@@ -40,7 +40,14 @@ public class Assignment {
         }
 
     }
-  
+
+    /**
+   * Prints out a list of existing items, their price, and number in stock.
+   * 
+   * @param names list of named items to run through
+   * @param prices prices of each named parallel item
+   * @param stocks number stock of each named parallel item
+   */
     public static void printInventory(String[] names, double[] prices, int[] stocks){
         for (int i = 0; i < names.length; i++){
             if (names[i] != null)
@@ -48,6 +55,14 @@ public class Assignment {
         }
     }
 
+    /**
+     * Finds a specified item and adds a specified amount to its stock.
+     * 
+     * @param names list of named items to run through
+     * @param stocks number stocked of an parallel named item
+     * @param target specific item's name to find
+     * @param amount amount to be added to item's stock
+     */
     public static void restockItem(String[] names, int[] stocks, String target, int amount){
         for (int i=0; i < names.length; i++){
             if(names[i] != null && names[i].equalsIgnoreCase(target)){
