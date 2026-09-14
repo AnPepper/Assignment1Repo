@@ -7,17 +7,8 @@ public class Assignment {
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
 
-        //test 
-        itemNames[9] = "Banana";
-        itemPrices[9] = 0.59;
-        itemStocks[9] = 30;
-        itemNames[8] = "Apple";
-        itemPrices[8] = 0.22;
-        itemStocks[8] = 10;
-
         //Options Menu
         Scanner input = new Scanner(System.in);
-
         while (true){
             System.out.println("=== Menu === \n 1. See Inventory \n 2. Restock Item \n 3. Exit ");
             System.out.print("Select an option: ");
@@ -46,8 +37,6 @@ public class Assignment {
                     break;
 
             }
-
-
         }
 
     }
